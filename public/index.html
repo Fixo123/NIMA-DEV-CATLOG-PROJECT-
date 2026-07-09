@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIMA DEV — Business WhatsApp Catlog Splitter</title>
+<meta name="description" content="Split one photo into a perfect 3x2 grid for your WhatsApp Business catalog. Upload, split, download each tile.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">NIMA<span class="dot">·</span>DEV</span>
+    <span class="brand-sub">BUSINESS WHATSAPP CATLOG</span>
+  </div>
+  <a href="#tool" class="topbar-cta">Open tool</a>
+</header>
+
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto">
+    <source src="https://files.catbox.moe/r6x7us.mp4" type="video/mp4">
+  </video>
+  <div class="hero-scrim"></div>
+
+  <div class="hero-grid" aria-hidden="true">
+    <span></span><span></span><span></span>
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="hero-content">
+    <p class="eyebrow">CATALOG GRID TOOL</p>
+    <h1>Split one photo into a<br> perfect <em>3×2</em> catalog</h1>
+    <p class="hero-sub">Upload a photo, get six equal tiles, download each one, and post it as one connected grid on your WhatsApp Business catalog.</p>
+    <a href="#tool" class="btn btn-primary">Upload a photo</a>
+  </div>
+
+  <div class="hero-foot">
+    <span>Scroll</span>
+    <span class="hero-foot-line"></span>
+  </div>
+</section>
+
+<section class="tool" id="tool">
+  <div class="tool-head">
+    <p class="eyebrow">STEP 01 — 03</p>
+    <h2>Your catalog, tile by tile</h2>
+    <p class="tool-sub">Every tile is cut to the exact same size, numbered in posting order, top‑left to bottom‑right.</p>
+  </div>
+
+  <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Upload photo">
+    <input type="file" id="fileInput" accept="image/*" hidden>
+    <div class="dropzone-inner" id="dropzoneInner">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 16V4M12 4l-4 4M12 4l4 4" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p class="dz-title">Drop your photo here</p>
+      <p class="dz-sub">or tap to choose a file — JPG or PNG</p>
+    </div>
+  </div>
+
+  <div class="grid-wrap" id="gridWrap" hidden>
+    <div class="grid-toolbar">
+      <div class="grid-toolbar-info">
+        <span id="fileName">photo.jpg</span>
+        <span class="grid-toolbar-dim" id="fileDim"></span>
+      </div>
+      <div class="grid-toolbar-actions">
+        <button class="btn btn-ghost" id="downloadAllBtn">Download all (.zip)</button>
+        <button class="btn btn-outline" id="resetBtn">Choose another photo</button>
+      </div>
+    </div>
+
+    <div class="catalog-grid" id="catalogGrid"></div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <span>NIMA DEV BUSINESS WHATSAPP CATLOG</span>
+  <span class="foot-dim">Photos are split entirely in your browser — nothing is uploaded anywhere.</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
