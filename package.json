@@ -1,0 +1,15 @@
+{
+  "name": "nima-dev-business-whatsapp-catlog",
+  "version": "1.0.0",
+  "description": "Split one photo into a perfect 3x2 WhatsApp Business catalog grid.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
